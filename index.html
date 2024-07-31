@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Frakin Store</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 gx-4 text-hide">
+                    <div class="tel">
+                        <i class="bi bi-telephone">&nbsp;&nbsp;
+                            <a href="#">+923010301457</a>
+                        </i>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 gx-4">
+                    <p class="text-uppercase text">FREE DELIVERY ABOVE 500 RS</p>
+                </div>
+                <div class="col-lg-3 gx-4 text-hide">
+                    <div class="email">
+                        <i class="bi bi-envelope">&nbsp;
+                            <a href="#">Support@info.Pk</a>
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid sticky-top">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                <div class="nav-menu" id="menu-btn" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                    <a href="javascript:void(0);">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
+                                <rect width="30" height="1.5"></rect>
+                                <rect y="7" width="20" height="1.5"></rect>
+                                <rect y="14" width="30" height="1.5"></rect>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <!-- navigation code 1 -->
+            <nav class="navbar navbar-light fixed-top">
+                <div class="offcanvas offcanvas-start text-bg-light nav-excess nav-1" tabindex="-1" id="menu"
+                    aria-labelledby="menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-5 navigator sm-query">
+                                <a class="text-uppercase text-decoration-none" style="text-decoration: none; border: none;" data-bs-toggle="offcanvas"
+                                    data-bs-target="#menu">menu</a>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-5 navigator sm-query">
+                                <a href="#" class="text-uppercase text-decoration-none" data-bs-toggle="offcanvas"
+                                    data-bs-target="#categories">categories</a>
+                            </div>
+                            <div
+                                class="col-lg-2 col-md-1 col-sm-1 col-1 d-flex justify-content-center sm-query stick-left">
+                                <span class="btn btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"
+                                    style="cursor: pointer;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-x-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="d-flex justify-content-start">
+                                <i class="bi bi-shop"></i>&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">
+                                    Shop
+                                </a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-search"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">Search</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-truck"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">track your order</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-arrow-repeat"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">return & exchange</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-question-circle"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">how to order</a>
+                            </li>
+                            <hr>
+                        </ul>
+                        <span class="cta">
+                            Need help?
+                            <br><br>
+                            <li>
+                                <a href="#"><i
+                                        class="bi bi-telephone text-decoration-none">&nbsp;&nbsp;</i>+923010301457</a>&nbsp;&nbsp;&nbsp;
+                            </li>
+                            <li>
+                                <a href="#"><i
+                                        class="bi bi-envelope text-decoration-none">&nbsp;&nbsp;&nbsp;</i>Support@info.Pk</a>
+                            </li>
+                        </span>
+                        <hr>
+                    </div>
+                </div>
+            </nav>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+            <!-- navigation code 1-->
+
+            <!-- navigation code 2 -->
+            <nav class="navbar navbar-light fixed-top">
+                <div class="offcanvas offcanvas-start text-bg-light nav-excess nav-2" tabindex="-1" id="categories"
+                    aria-labelledby="categories">
+                    <div class="container">
+                        <div class="row">
+                            <!-- <div class="col-6 navigator">
+                                    <a href="#" class="text-uppercase text-decoration-none sm-query">menu</a>
+                                </div> -->
+                            <div class="col-lg-10 col-md-10 col-md-10 col-10 navigator sm-query">
+                                <a href="#" class="text-uppercase text-decoration-none p-1">categories</a>
+                            </div>
+                            <div class="col-lg-2 col-md-1 co-sm-1 col-1 d-flex justify-content-center sm-query">
+                                <span class="btn btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"
+                                    style="cursor: pointer;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-x-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="d-flex">
+                                <i class="bi bi-bag-check-fill"></i>&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">
+                                    All Products
+                                </a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-eye-fill"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">Everything Under 1000</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-brush"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">Cleaning Accessories</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-sunglasses"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">fashion accessories</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-cup-fill"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">Kitchenware</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-lightbulb"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">Home & Lifestyle</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item d-flex">
+                                <i class="bi bi-clock-fill"></i>&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="text-decoration-none text-capitalize">wall clocks</a>
+                            </li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navigation code 2-->
+            <div class="col-lg-8 col-md-8 col-sm-7 col-7">
+                <div class="logo d-flex justify-content-center">
+                    <a href="#"><img src="assets/images/logo.png" width="100%" height="100%" alt="Frakin Logo"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                <div class="custom formargin">
+                    <div class="search-icon hide-on-small icon-w">
+                        <a href="#"><i class="bi bi-search icon-hidex"></i></a>
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div class="fav-icon icon-hide sm-hide ">
+                        <a href="#"><i class="bi bi-heart"></i></a>
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div class="cart-icon hide-on-small icon-w">
+                        <a href="#" class="text-decoration-none"><i class="bi bi-cart3"></i><span
+                                class="lead sm-hide">&nbsp;Rs:
+                                0.00</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl p-0">
+        <div class="row m-0">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="assets/images/summersale.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="assets/images/summersale.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="custom-carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="custom-carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="custom-carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="custom-carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- our collections -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="collections">
+                    <h3 class="text-capitalize">our collections</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container hidecollection" id="forLgOnly"> 
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="collection-body">
+                    <ul>
+                        <li>
+                            <a href="#" class="text-capitalize">Everything Under 1000</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-capitalize">Home & lifestyle</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-capitalize">car cleaner</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-capitalize">fashion accessories</a>
+                        </li>
+                        <!-- <li>
+                    <a href="#" class="text-capitalize">Kitchenware</a>
+                  </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our collections -->
+
+    <div class="container hidecollection" id="forSmOnly">
+        <div class="row">
+          <div class="col-sm-12 col-12">
+            <div class="collection-body">
+              <ul>
+                <li class="d-flex">
+                <a href="#" class="text-capitalize">Everything Under 1000</a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="text-capitalize">Home & lifestyle</a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="text-capitalize">car cleaner</a>
+              </li>
+              <li class="d-flex">
+                <a href="#" class="text-capitalize">fashion accessories</a>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- our collections -->
+      <br>
+      <!-- Products started here -->
+       <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+            </div>
+            <br>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div>
+
+           <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="products card position-relative">
+                    <a href="#"><img src="assets/images/toy.png" class="prod-img img-fluid" alt="">
+                        <i class="bi bi-heart position-absolute icon-on-hover"></i>
+                    </a>
+                    <div class="discount-label position-absolute">-22%</div>
+                </div>
+                <h5 class="text-capitalize prod-cont card-title">Interia Dancing Car - Orange Other</h5>
+                <div><span class="original-price">Rs.1250</span><span class="sale-price">Rs.800</span></div>
+                <br>
+            </div> 
+        </div>
+       </div>
+        <!-- Products ends here -->
+        <br>
+</body>
+
+</html>

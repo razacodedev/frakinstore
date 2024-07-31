@@ -1,0 +1,25 @@
+
+@use 'custom';
+
+//IMPORT THE COMPONENTS
+@use 'components/btn';
+@use 'components/cards';
+@use 'components/cardslides';
+@use 'components/cart';
+@use 'components/chavronup';
+@use 'components/favourites';
+@use 'components/logo';
+@use 'components/mainslider';
+@use 'components/mixins';
+@use 'components/navigator';
+@use 'components/searchbar';
+@use 'components/typography';
+
+//IMPORT THE SECTIONS
+@use 'sections/about';
+@use 'sections/bestseller';
+@use 'sections/collections';
+@use 'sections/extra';
+@use 'sections/faqs';
+@use 'sections/footer';
+@use 'sections/header';

@@ -1,0 +1,90 @@
+
+    @use '../components/mixins';
+    @use '../custom' as *;
+
+.background
+{
+    background-color: $primary;
+}
+
+.tel
+{
+    color: $secondary;
+    padding-top: 8px;
+    display: flex;
+    justify-content: start;
+
+    i
+    {
+        color: $secondary;
+        font-size: 14px;
+        align-items: start;
+
+        a
+        {
+            text-decoration: none;
+            font-size: 14px;
+            color: $secondary;
+            font-weight: 400;
+            font-style: normal;
+
+        }:hover
+        {
+            // color: $primary;
+            text-decoration: underline;
+        }
+    }
+}
+
+p
+{
+    display: flex;
+}
+
+.text
+{
+    color: $secondary;
+    font-size: 14px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.email
+{
+    display: flex;
+    justify-content: end;
+    color: $secondary;
+    padding-top: 8px;
+
+    i
+    {
+        color: $secondary;
+        font-size: 15px;
+
+        a
+        {
+            text-decoration: none;
+            font-size: 14px;
+            color: $secondary;
+            font-weight: 400;
+            font-style: normal;
+        }:hover
+        {
+            // color: $primary;
+            text-decoration: underline;
+        }
+    }
+}
+
+// media Queries
+@media (max-width: 992px)
+{
+    .text-hide
+    {
+        @include mixins.text-hide;
+    }
+}
+

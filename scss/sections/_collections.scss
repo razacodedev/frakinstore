@@ -1,0 +1,81 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+.collections h3 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.collection-body ul li {
+    display: inline-flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 12px;
+    align-items: center;
+}
+
+.collection-body ul li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 8px;
+    transition: color 0.3s ease, font-weight 0.0s ease; /* Add transition for color and font-weight */
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    &:hover::before {
+        border-color: black; /* Adjust the color as needed */
+    }
+
+    &:hover {
+        font-weight: 400;
+    }
+}
+
+
+
+
+/* Default styles - hide both containers */
+.hidecollection {
+    display: none;
+}
+
+/* Show for large screens */
+@media (min-width: 769px) {
+    #forLgOnly {
+        display: block;
+    }
+}
+
+/* Show for small screens */
+@media (max-width: 768px) {
+    #forSmOnly {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) 
+{
+    div.collection-body, ul
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 17px;
+    }
+}
+
+
+

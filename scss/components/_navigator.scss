@@ -1,0 +1,152 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+
+.modal-backdrop.show 
+{
+    opacity: 0;
+    background-color: $secondary;
+    /* opacity: var(--bs-backdrop-opacity); */
+}
+
+.modal-backdrop {
+    --bs-backdrop-zindex: 1050;
+    --bs-backdrop-bg: $secondary;
+    --bs-backdrop-opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bs-backdrop-bg);
+    opacity: var(--bs-backdrop-opacity);
+    cursor: pointer;
+}
+
+.offcanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    color: var(--bs-offcanvas-color);
+    visibility: hidden;
+    background-color: var(--bs-offcanvas-bg);
+    background-clip: padding-box;
+    outline: 0;
+}
+
+.navigator
+{
+    display: inline;
+    margin: -15px 15 15 -15px;
+    padding-top: 5px;
+    // border: 1px solid $primary;
+    text-align: center;
+    // background-color: $secondary;
+    font-weight: 400;
+   
+    a
+    {
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 6px 6px;
+        color: black;
+        :hover
+        {
+            background-color: $primary;
+            font-size: 100px;
+        }
+    }
+}
+
+.offcanvas-body ul li i {
+    font-size: 15px;
+    color: black;
+    display: block;
+    margin: 0 0 0 7px;
+    align-items: start;
+}
+
+.offcanvas-body ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    align-items: start;
+}
+
+.cta li
+{
+    display: block;
+    margin: 2px;
+}
+
+.cta li a
+{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.cta li a:hover
+{
+    color: $primary;
+}
+
+// #menu
+// {
+//     display: none;
+// }
+
+.modal-backdrop.show {
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+    /* opacity: var(--bs-backdrop-opacity); */
+    display: none;
+}
+
+.navigator a:hover
+{
+    border: 1px solid black;
+}
+
+.nav.navbar.navbar-light.fixed-top
+{
+    margin-top: 8px;
+}
+
+/* Change color of the icon on hover */
+.offcanvas-body ul li a:hover {
+    color: $primary; 
+}
+
+/* If you want to change color when hovering over the whole list item */
+.offcanvas-body ul li:hover i {
+    color: $primary; 
+}
+
+@media (max-width: 400px) {
+    .sm-query a
+    {
+        font-size: 12px;
+    }
+
+}
+
+.sticky-top
+{
+    min-width: 100%;
+    min-height: auto;
+    background: fixed rgb(255, 255, 255);
+    display: block;
+    // margin: 0 auto;
+    padding-bottom: 12px;
+    border-radius: 1px;
+    transition: all 0.2s ease; 
+    box-shadow: #fff;
+}

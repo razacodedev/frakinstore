@@ -1,0 +1,175 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+.nav-menu
+{
+    margin-top: 16px;
+
+    i
+    {
+        fill: $primary;
+    }
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.custom
+{
+    display: flex;
+    justify-content: end;
+    margin-top: 16px;
+    margin-right: 25px;
+}
+
+.search-icon
+{
+    i
+    {
+        fill: $primary;
+        font-size: larger;
+    }
+}
+
+.fav-icon
+{
+    i
+    {
+        fill: $primary;
+        font-size: larger;
+    }
+}
+
+.cart-icon
+{
+    a
+    {
+        text-decoration: none;
+
+        i{
+            fill: $primary;
+            font-size: larger;
+        }
+    }
+}
+
+.lead {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+hr
+{
+    fill: $primary;
+    color: $primary;
+}
+
+@media (max-width: 768px) {
+    .sm-hide 
+    {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .logo
+    {
+        display: flex;
+        margin: 1px 1px 1px 1px;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .icon-hide
+    {
+        display: none !important;
+        font-size: medium;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .nav {
+        margin: 0 ;
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-menu {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .icon-w a i
+    {
+        font-size: 21px
+    }
+}
+
+@media (max-width: 350px) {
+    .icon-hidex
+    {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom
+    {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo a img
+    {
+        width: 85px;
+        height: auto;
+        font-size: 4px;
+        margin: 0 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .formargin
+    {
+        margin: 8px 0;
+        font-size: 8px;
+        padding: 0 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo 
+    {
+        margin-left: 0;
+    }
+}
+
+div.col
+{
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .p
+    {
+        font-size: 8px;
+    }
+}
+

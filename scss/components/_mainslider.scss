@@ -1,0 +1,79 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+.carousel-item {
+    height: 500px; /* Apne required height ke mutabiq set karen */
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure karega ke image container mein fit ho jaye */
+}
+
+// -------------------------
+.custom-carousel-control-prev,
+.custom-carousel-control-next {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 0.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.custom-carousel-control-prev {
+    left: 10px; /* Adjust as needed */
+}
+
+.custom-carousel-control-next {
+    right: 10px; /* Adjust as needed */
+}
+
+.custom-carousel-control-prev:hover,
+.custom-carousel-control-next:hover 
+{
+    background-color: $primary;
+    border-color: $black;
+    color: #fff;
+    fill: #fff;
+}
+
+.custom-carousel-control-prev-icon,
+.custom-carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.custom-carousel-control-prev-icon 
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/%3E%3C/svg%3E");
+    background-size: cover;
+   
+}
+
+.custom-carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+@media (max-width: 992px) {
+    .carousel-item {
+        height: 400px; /* Apne required height ke mutabiq set karen */
+    }
+
+}
+
+@media (max-width: 992px) {
+    .carousel-item {
+        height: 200px; /* Apne required height ke mutabiq set karen */
+    }
+
+}
