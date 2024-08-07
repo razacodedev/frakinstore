@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* Option 2: Import via CSS */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Poppins";
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -11846,6 +11851,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  font-family: "Poppins";
+}
+
+body {
+  font-family: "Poppins";
+}
+
 .products {
   display: flex;
   justify-content: center;
@@ -11856,18 +11869,20 @@ textarea.form-control-lg {
   background-clip: border-box;
   background-size: cover;
   padding: 10px;
+  overflow: hidden; /* Ensure the image does not go outside the container */
 }
 
 .prod-img {
   width: 100%;
   height: 200px; /* Fixed height for image */
   object-fit: cover; /* Ensure the image covers the entire area */
+  transition: transform 0.9s ease; /* Add transition for smooth zoom effect */
 }
 
 .prod-cont {
   font-size: 17px;
   margin-top: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .original-price {
@@ -11879,7 +11894,7 @@ textarea.form-control-lg {
 
 .sale-price {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 600;
   color: red;
 }
 
@@ -11911,14 +11926,10 @@ textarea.form-control-lg {
   }
   .sale-price {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     color: red;
   }
 }
-.card:hover {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
-}
-
 /* Positioning the heart icon */
 .icon-on-hover {
   display: none;
@@ -11950,20 +11961,10 @@ textarea.form-control-lg {
 }
 
 .prod-img:hover {
-  transition: transform 0.9s ease; /* Add transition for smooth zoom effect */
   transform: scale(1.1); /* Scale image to 110% */
+  transition-delay: 0s;
 }
 
-@media (max-width: 1200px) {
-  .card:hover {
-    box-shadow: 0 0.115rem 0.2rem rgba(0, 0, 0, 0.03);
-  }
-}
-@media (max-width: 576px) {
-  .card:hover {
-    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.018);
-  }
-}
 @media (max-width: 995px) {
   .icon-on-hover {
     display: block;
@@ -11975,6 +11976,100 @@ textarea.form-control-lg {
     font-size: 8px;
   }
 }
+body {
+  font-family: "Poppins";
+}
+
+.product-slider .product-card {
+  position: relative;
+  padding: 15px;
+  text-align: center;
+}
+
+.product-slider .product-card .discount-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.product-slider .product-card .original-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.product-slider .product-card .sale-price {
+  color: red;
+  font-weight: 600;
+}
+
+/* Navigation buttons */
+.product-slider .slick-prev, .product-slider .slick-next {
+  background: #fff;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 25px;
+  z-index: 2; /* Ensure the buttons are above other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px; /* Center the buttons vertically relative to the slider */
+  opacity: 0; /* Hide buttons by default */
+  transition: opacity 0.4s ease; /* Smooth transition for visibility */
+}
+
+/* Adjust the position to avoid overlapping with the product cards */
+.product-slider .slick-prev {
+  left: -20px; /* Move the button slightly to the left */
+}
+
+.product-slider .slick-next {
+  right: -20px; /* Move the button slightly to the right */
+}
+
+.product-slider .slick-prev i, .product-slider .slick-next i {
+  color: #000;
+}
+
+.product-card:hover .icon-on-hover {
+  display: block;
+}
+
+.slick-next:before, .slick-prev:before {
+  display: none;
+}
+
+/* Show buttons on hover between 1400px and 992px */
+@media (min-width: 992px) and (max-width: 1400px) {
+  .product-slider .slick-prev, .product-slider .slick-next {
+    opacity: 0; /* Hide buttons by default */
+  }
+  .product-slider:hover .slick-prev, .product-slider:hover .slick-next {
+    opacity: 1; /* Show buttons on hover */
+  }
+}
+/* Show buttons by default between 570px and 992px */
+@media (min-width: 570px) and (max-width: 992px) {
+  .product-slider .slick-prev, .product-slider .slick-next {
+    display: flex !important;
+    opacity: 1 !important; /* Ensure buttons are visible by default */
+  }
+}
+/* Hide buttons for screen widths less than 570px */
+@media (max-width: 570px) {
+  .product-slider .slick-prev, .product-slider .slick-next {
+    display: none !important;
+  }
+}
+body {
+  font-family: "Poppins";
+}
+
 .carousel-item {
   height: 500px; /* Apne required height ke mutabiq set karen */
 }
@@ -12043,6 +12138,10 @@ textarea.form-control-lg {
     height: 200px; /* Apne required height ke mutabiq set karen */
   }
 }
+body {
+  font-family: "Poppins";
+}
+
 .modal-backdrop.show {
   opacity: 0;
   background-color: rgb(255, 255, 255);
@@ -12161,18 +12260,82 @@ textarea.form-control-lg {
 .sticky-top {
   min-width: 100%;
   min-height: auto;
-  background: fixed rgb(255, 255, 255);
+  background-color: #ffffff;
+  border: 1px thick #ffffff;
+  border-color: #ffffff;
   display: block;
   padding-bottom: 12px;
   border-radius: 1px;
   transition: all 0.2s ease;
-  box-shadow: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  display: block; /* Optional: to remove any extra space below the image */
+}
+
+.about-des {
+  margin-top: 28px;
+}
+.about-des h4 {
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 1px;
+  margin-bottom: 23px;
+  font-size: 28px;
+}
+.about-des p {
+  display: inline-flex;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 300;
+  align-items: center;
+  margin-left: 18px;
+  line-break: 1px;
+}
+
+@media (max-width: 992px) {
+  .about-des {
+    margin-top: 20px;
+  }
+  .about-des h4 {
+    margin-bottom: 13px;
+    font-size: 20px;
+  }
+  .about-des p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .about-des {
+    margin-top: 30px;
+  }
+  .about-des h4 {
+    margin-bottom: 25px;
+    font-size: 25px;
+  }
+  .about-des p {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+}
+body {
+  font-family: "Poppins";
 }
 
 .collections h3 {
   font-size: 30px;
   display: flex;
   justify-content: center;
+  font-weight: 600;
+  font-family: "Poppins";
 }
 
 .collection-body ul li {
@@ -12233,6 +12396,10 @@ textarea.form-control-lg {
     margin-top: 17px;
   }
 }
+body {
+  font-family: "Poppins";
+}
+
 .nav-menu {
   margin-top: 16px;
 }
@@ -12359,6 +12526,28 @@ div.col {
     font-size: 8px;
   }
 }
+.btn-viewmore {
+  border-color: none;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 35px 10px 35px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.btn-viewmore:hover {
+  border: 2px solid transparent; /* Ensure no border initially */
+  border-color: rgb(255, 255, 255);
+  background-color: #08a49c;
+  color: #fff;
+}
+
+body {
+  font-family: "Poppins";
+}
+
 .background {
   background-color: #08a49c;
 }

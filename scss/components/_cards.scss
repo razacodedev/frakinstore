@@ -2,6 +2,11 @@
 @use '../components/mixins';
 @use '../custom' as *;
 
+body 
+{
+    font-family: "Poppins";
+}
+
 .products 
 {
     display: flex;
@@ -15,18 +20,20 @@
     background-size: cover;
     padding: 10px;
     // margin-bottom: 20px;
+    overflow: hidden; /* Ensure the image does not go outside the container */
 }
 .prod-img 
 {
     width: 100%;
     height: 200px; /* Fixed height for image */
     object-fit: cover; /* Ensure the image covers the entire area */
+    transition: transform 0.9s ease; /* Add transition for smooth zoom effect */
 }
 .prod-cont 
 {
     font-size: 17px;
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: 500;
     // margin-bottom: 5px;
 }
 .original-price 
@@ -39,7 +46,7 @@
 .sale-price 
 {
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
     color: red;
 }
 
@@ -81,15 +88,11 @@
 
     .sale-price {
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 600;
         color: red;
     }
 }
 
-.card:hover
-{
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.040);
-}
 
 /* Positioning the heart icon */
 .icon-on-hover 
@@ -127,26 +130,10 @@
 
 .prod-img:hover
 {
-    transition: transform 0.9s ease; /* Add transition for smooth zoom effect */
     transform: scale(1.1); /* Scale image to 110% */
+    transition-delay: 0s;
 }
 
-
-@media (max-width: 1200px) 
-{
-    .card:hover
-{
-    box-shadow: 0 0.115rem 0.20rem rgba(0, 0, 0, 0.030);
-}
-}
-
-@media (max-width: 576px) 
-{
-    .card:hover
-{
-    box-shadow: 0 0.100rem 0.20rem rgba(0, 0, 0, 0.018);
-}
-}
 
 @media (max-width: 995px) 
 {

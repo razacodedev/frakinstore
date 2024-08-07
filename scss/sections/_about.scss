@@ -1,0 +1,81 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+@use '../components/typography' as *;
+
+body 
+{
+    font-family: "Poppins";
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    display: block; /* Optional: to remove any extra space below the image */
+}
+
+.about-des
+{
+    margin-top: 28px;
+    h4
+    {
+        font-family: Poppins;
+        font-weight: 600;
+        line-height: 1px;
+        margin-bottom: 23px;
+        font-size: 28px;
+
+    }
+        p
+        {
+            display: inline-flex;
+            font-family: Poppins;
+            font-size: 15px;
+            font-weight: 300;
+            align-items: center;
+            margin-left: 18px;
+            line-break: 1px;
+        }
+
+}
+
+@media (max-width: 992px) {
+    .about-des
+{
+    margin-top: 20px;
+    h4
+    {
+        margin-bottom: 13px;
+        font-size: 20px;
+
+    }
+        p
+        {
+            font-size: 11px;
+        }
+
+}
+}
+
+@media (max-width: 768px) {
+    .about-des
+{
+    margin-top: 30px;
+    h4
+    {
+        margin-bottom: 25px;
+        font-size: 25px;
+
+    }
+        p
+        {
+            font-size: 15px;
+            // line-height: 1px;
+            display: flex;
+            justify-content: center;
+            // width: 100%;
+
+        }
+
+}
+}

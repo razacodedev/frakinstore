@@ -1,0 +1,97 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+body {
+    font-family: "Poppins";
+}
+
+.product-slider .product-card {
+    position: relative;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-slider .product-card .discount-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.product-slider .product-card .original-price {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.product-slider .product-card .sale-price {
+    color: red;
+    font-weight: 600;
+}
+
+/* Navigation buttons */
+.product-slider .slick-prev, .product-slider .slick-next {
+    background: #fff;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 25px;
+    z-index: 2; /* Ensure the buttons are above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px; /* Center the buttons vertically relative to the slider */
+    opacity: 0; /* Hide buttons by default */
+    transition: opacity 0.4s ease; /* Smooth transition for visibility */
+}
+
+/* Adjust the position to avoid overlapping with the product cards */
+.product-slider .slick-prev {
+    left: -20px; /* Move the button slightly to the left */
+}
+
+.product-slider .slick-next {
+    right: -20px; /* Move the button slightly to the right */
+}
+
+.product-slider .slick-prev i, .product-slider .slick-next i {
+    color: #000;
+}
+
+.product-card:hover .icon-on-hover {
+    display: block;
+}
+
+.slick-next:before, .slick-prev:before {
+    display: none;
+}
+
+/* Show buttons on hover between 1400px and 992px */
+@media (min-width: 992px) and (max-width: 1400px) {
+    .product-slider .slick-prev, .product-slider .slick-next {
+        opacity: 0; /* Hide buttons by default */
+    }
+
+    .product-slider:hover .slick-prev, .product-slider:hover .slick-next {
+        opacity: 1; /* Show buttons on hover */
+    }
+}
+
+/* Show buttons by default between 570px and 992px */
+@media (min-width: 570px) and (max-width: 992px) {
+    .product-slider .slick-prev, .product-slider .slick-next {
+        display: flex !important;
+        opacity: 1 !important; /* Ensure buttons are visible by default */
+    }
+}
+
+/* Hide buttons for screen widths less than 570px */
+@media (max-width: 570px) {
+    .product-slider .slick-prev, .product-slider .slick-next {
+        display: none !important;
+    }
+}

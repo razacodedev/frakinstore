@@ -2,10 +2,17 @@
 @use '../components/mixins';
 @use '../custom' as *;
 
+body 
+{
+    font-family: "Poppins";
+}
+
 .collections h3 {
     font-size: 30px;
     display: flex;
     justify-content: center;
+    font-weight: 600;
+    font-family: 'Poppins';
 }
 
 .collection-body ul li {

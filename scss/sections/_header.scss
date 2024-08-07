@@ -1,6 +1,11 @@
 
-    @use '../components/mixins';
-    @use '../custom' as *;
+@use '../components/mixins';
+@use '../custom' as *;
+
+body 
+{
+    font-family: "Poppins";
+}
 
 .background
 {
