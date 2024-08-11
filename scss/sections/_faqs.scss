@@ -1,0 +1,108 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+body 
+{
+    font-family: "Poppins";
+}
+
+.background-custom
+{
+    background-color: #F5F5F5;
+}
+
+#accordionExample
+{
+    width: 80%;
+    max-width: 80%;
+}
+
+@media (max-width: 950px) 
+{
+    #accordionExample
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+.accordion {
+    --bs-accordion-bg: #EEEEEE;
+    --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+    --bs-accordion-border-color: none;
+    --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --bs-accordion-btn-focus-box-shadow: none;
+    // --bs-accordion-active-color: var(--bs-primary-text-emphasis);
+    // --bs-accordion-active-bg: black;
+    --bs-accordion-active-bg: $primary; 
+}
+
+.accordion-header
+{
+    background-color: $primary;
+    margin: 0 auto;
+    height: auto;
+    padding: 0 auto;
+}
+
+.accordion-body
+{
+    background-color: $secondary;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.accordion-button
+{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.accordion-body
+{
+    p
+    {
+        font-size: 15px;
+        font-family: Poppins;
+        // line-break: 8px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .accordion-header
+{
+    height: auto;
+}
+
+.accordion-body
+{
+    height: auto;
+}
+
+.accordion-button
+{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.accordion-body
+{
+    p
+    {
+        font-size: 15px;
+        font-family: Poppins;
+        // line-break: 8px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+}
+
+}

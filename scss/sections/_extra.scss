@@ -198,3 +198,60 @@ div.col
     background-color: $primary;
     color: #fff;
 }
+
+.btn-loadmore
+{
+    border-color: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 35px 10px 35px;
+    overflow: hidden;
+    border: 2px solid transparent; /* Ensure no border initially */
+    border-color: $secondary;
+    background-color: $primary;
+    color: #fff;
+}
+
+.btn-loadmore:hover
+{
+    opacity: 85%;
+}
+
+// Second last section//
+
+.second-last-sec
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-icons {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-family: Poppins;
+}
+
+.bi-icons svg {
+    margin-right: 8px; /* Adjust the space between the icon and text */
+}
+
+.icon-description {
+    margin-top: 10px; /* Space between icon and description */
+    font-size: 14px; /* Adjust the font size if needed */
+    font-family: Poppins;
+    line-height: 20px;
+}
+
+@media (max-width: 576px) 
+{
+    
+.second-last-sec
+{
+    margin-left: 40px;
+}
+
+}
