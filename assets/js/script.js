@@ -39,3 +39,14 @@ $(document).ready(function () {
         ]
     });
 });
+
+document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', function() {
+        // Toggle the active class on the content
+        this.parentElement.nextElementSibling.classList.toggle('active');
+        
+        // Toggle the "+" to "-" when the content is open
+        this.textContent = this.textContent === "+" ? "−" : "+";
+    });
+});
+

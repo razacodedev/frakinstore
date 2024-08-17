@@ -1,0 +1,227 @@
+
+@use '../components/mixins';
+@use '../custom' as *;
+
+body 
+{
+    font-family: "Poppins";
+}
+
+.green-back
+{
+    background-color: $primary;
+}
+
+
+.main-head
+{
+    h6
+    {
+        color: $secondary;
+        font-family: Poppins;
+        font-weight: 500;
+    }
+}
+
+.other ul
+{
+    margin-top: 30px;
+    padding-left: 0;
+}
+
+.other ul li
+{
+    list-style: none;
+    align-items: center;
+    font-family: Poppins;
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 2px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+    &:hover
+    {
+        opacity: 80%;
+    }
+
+    a{
+        text-decoration: none;
+        color: $secondary;
+        font-family: Poppins;
+
+        i
+        {
+            font-size: 16px;
+            font-style: normal;
+        }
+    }
+}
+
+.footer
+{
+    align-items: center;
+}
+
+.cta-footer 
+{
+    display: flex;
+    align-items: center;
+    border: 1px solid $secondary;
+    border-radius: 50px;
+    background-color: $primary;
+    max-width: min-content;
+}
+
+.email-input 
+{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    outline: none;
+    background-color: $primary;
+    color: $secondary;
+    font-size: 14px;
+
+}
+
+.btn-submit 
+{
+    margin-left: auto;
+}
+
+.subscribe-btn {
+    background-color: transparent;
+    border: none;
+    color: $secondary;
+    font-weight: 400;
+    padding: 0 auto;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    width: auto;
+}
+
+.subscribe-btn i {
+    margin-left: 5px;
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+}
+
+.subscribe-btn:hover {
+    opacity: 80%;
+}
+
+.mail-box input
+{
+    color: $secondary;
+}
+
+.mail-box input placeholder
+{
+    color: #fff;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 0; /* Start with no padding */
+}
+
+.accordion-content.active {
+    max-height: 1000px; /* Temporarily set a high max-height to ensure content fully expands */
+    padding: 10px 0; /* Add padding when the content is visible */
+}
+
+/* For smooth closing, dynamically calculate max-height */
+.accordion-content {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.accordion-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Adjust color as needed */
+}
+
+.accordion-toggle:focus {
+    outline: none;
+}
+
+/* Hide the accordion toggle button on larger screens */
+@media (min-width: 769px) {
+    .accordion-toggle {
+        display: none;
+    }
+
+    .accordion-content {
+        display: block; /* Always show content on large screens */
+        max-height: none; /* Remove the max-height restriction */
+        padding: 0; /* Adjust padding if necessary */
+        overflow: visible; /* Ensure content is fully visible */
+    }
+}
+
+/* Show the accordion content when active on small screens */
+@media (max-width: 768px) 
+{
+    .accordion-content.active 
+    {
+        max-height: 1000px; /* Arbitrary large value to ensure content is fully visible */
+        padding: 10px 0; /* Add padding when content is visible */
+    }
+
+    .m-footer
+    {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 768px) 
+{
+    .email-input
+    {
+        padding: 10px 2px;
+        font-size: 12px;
+    }
+
+    .btn-submit
+    {
+        margin-left: -15px;
+    }
+
+    .subscribe-btn
+    {
+        font-size: 11px;
+    }
+    
+    .cta-footer
+    {
+        max-width: 100%;
+        min-width: 100%;
+        width: 80%;
+        padding: 0 auto;
+    }
+
+    .subscribe-btn i {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) 
+{
+    .cta-footer
+    {
+        justify-content: center;
+    }
+}
