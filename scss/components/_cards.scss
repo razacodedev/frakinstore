@@ -102,6 +102,7 @@ body
     left: 10px; 
     color: $primary; 
     font-size: 16px; 
+    position: absolute;
 }
 
 /* Positioning the discount label */
@@ -150,3 +151,14 @@ body
         font-size: 8px;
     }
 }
+
+//tooltip
+
+.tooltip {
+    white-space: nowrap; /* Ensure the tooltip doesn't wrap and stays to the right */
+}
+
+.tooltip.bs-tooltip-right {
+    transform: translateX(10px) !important; /* Adjust the position to the right */
+}
+

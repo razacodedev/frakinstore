@@ -5683,8 +5683,8 @@ textarea.form-control-lg {
   --bs-tooltip-padding-y: 0.25rem;
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.875rem;
-  --bs-tooltip-color: var(--bs-body-bg);
-  --bs-tooltip-bg: var(--bs-emphasis-color);
+  --bs-tooltip-color: rgb(255, 255, 255);
+  --bs-tooltip-bg: #08a49c;
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 0.9;
   --bs-tooltip-arrow-width: 0.8rem;
@@ -11937,6 +11937,7 @@ body {
   left: 10px;
   color: #08a49c;
   font-size: 16px;
+  position: absolute;
 }
 
 /* Positioning the discount label */
@@ -11976,6 +11977,14 @@ body {
     font-size: 8px;
   }
 }
+.tooltip {
+  white-space: nowrap; /* Ensure the tooltip doesn't wrap and stays to the right */
+}
+
+.tooltip.bs-tooltip-right {
+  transform: translateX(10px) !important; /* Adjust the position to the right */
+}
+
 body {
   font-family: "Poppins";
 }
@@ -12716,6 +12725,44 @@ div.col {
     margin-left: 30px;
   }
 }
+.modal-content {
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.input-group {
+  margin-top: 20px;
+}
+
+.btn-outline-secondary {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.form-select,
+.form-control {
+  border: 1px solid #ccc; /* Adjust border color or style if needed */
+}
+
+.form-select:focus {
+  outline: none;
+  box-shadow: none; /* Optional: if you want to remove the shadow as well */
+}
+
+/* Remove the outline from the search input when focused */
+.form-control:focus {
+  outline: none;
+  box-shadow: none; /* Optional: if you want to remove the shadow as well */
+}
+
+.modal-body {
+  padding: 0;
+}
+
 body {
   font-family: "Poppins";
 }

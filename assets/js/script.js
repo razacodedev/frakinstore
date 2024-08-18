@@ -19,6 +19,7 @@ $(document).ready(function () {
                     slidesToShow: 3,
                     slidesToScroll: 2,
                     infinite: true,
+                    autoplay: true
                 }
             },
             {
@@ -49,4 +50,12 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
         this.textContent = this.textContent === "+" ? "−" : "+";
     });
 });
+
+//tooltip
+
+// Using jQuery
+$(function () {
+  $('[data-bs-toggle="tooltip"]').tooltip();
+});
+
 

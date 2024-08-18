@@ -269,3 +269,49 @@ div.col
 }
 
 }
+
+// modal box code
+
+.modal-content 
+{
+    border-radius: 50px;
+    background-color: $secondary;
+}
+
+.modal-header 
+{
+    border-bottom: none;
+}
+
+.input-group 
+{
+    margin-top: 20px;
+}
+
+.btn-outline-secondary {
+    background-color: $secondary;
+    border: 1px solid $secondary;
+}
+
+.form-select,
+.form-control {
+    border: 1px solid #ccc; /* Adjust border color or style if needed */
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: none; /* Optional: if you want to remove the shadow as well */
+}
+
+/* Remove the outline from the search input when focused */
+.form-control:focus {
+    outline: none;
+    box-shadow: none; /* Optional: if you want to remove the shadow as well */
+}
+
+.modal-body
+{
+    padding: 0;
+}
+
+
