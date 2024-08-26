@@ -12075,6 +12075,50 @@ body {
     display: none !important;
   }
 }
+#cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.table-striped th,
+.table-striped td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.table-dark th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.text-end h5 {
+  margin-right: 15px;
+}
+
+.modal-footer {
+  justify-content: end;
+}
+
+.modal-fullscreen .modal-content {
+  padding: 2rem;
+  max-width: 100%;
+  margin: auto;
+}
+
 body {
   font-family: "Poppins";
 }
@@ -12186,6 +12230,11 @@ body {
   outline: 0;
 }
 
+@media (max-width: 576px) {
+  .offcanvas {
+    max-width: 90%;
+  }
+}
 .navigator {
   display: inline;
   margin: -15px 15 15 -15px;
@@ -12578,6 +12627,11 @@ hr {
     display: none !important;
   }
 }
+@media (max-width: 992px) {
+  .sm-hide {
+    display: none !important;
+  }
+}
 @media (max-width: 576px) {
   .logo {
     display: flex;
@@ -12763,6 +12817,116 @@ div.col {
   padding: 0;
 }
 
+/* Hide the navigation bar by default */
+.bottom-nav {
+  display: none;
+}
+
+/* Media query to show navigation bar on screens 768px and below */
+@media screen and (max-width: 768px) {
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+  .nav-item {
+    flex: 1;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    fill: black;
+    transition: color 0.3s ease;
+  }
+  .nav-item:hover {
+    color: #08a49c;
+  }
+  .nav-label {
+    display: block;
+    font-size: 12px;
+  }
+}
+/* Default: Hide the navigation bar */
+.bottom-nav {
+  display: none;
+}
+
+/* Media query for screens 768px and below */
+@media screen and (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+  }
+}
+.empty-wishlist {
+  text-align: center;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.empty-wishlist i {
+  font-size: 64px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.empty-wishlist h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-wishlist p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.empty-wishlist a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: #08a49c;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.empty-wishlist a:hover {
+  background-color: #08a49c;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .empty-wishlist {
+    padding: 20px;
+  }
+  .empty-wishlist i {
+    font-size: 48px;
+  }
+  .empty-wishlist h2 {
+    font-size: 20px;
+  }
+  .empty-wishlist p {
+    font-size: 14px;
+  }
+  .empty-wishlist a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .spec-margin {
+    margin-top: 25px;
+  }
+}
 body {
   font-family: "Poppins";
 }
@@ -12981,7 +13145,7 @@ body {
     display: block; /* Always show content on large screens */
     max-height: none; /* Remove the max-height restriction */
     padding: 0; /* Adjust padding if necessary */
-    overflow: visible; /* Ensure content is fully visible */
+    overflow: hidden; /* Ensure content is fully visible */
   }
 }
 /* Show the accordion content when active on small screens */

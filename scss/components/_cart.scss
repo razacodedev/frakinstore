@@ -1,0 +1,45 @@
+
+
+#cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.table-striped th,
+.table-striped td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.table-dark th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.text-end h5 {
+    margin-right: 15px;
+}
+
+.modal-footer {
+    justify-content: end;
+}
+
+.modal-fullscreen .modal-content {
+    padding: 2rem;
+    max-width: 100%;
+    margin: auto;
+}

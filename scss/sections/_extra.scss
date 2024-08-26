@@ -85,6 +85,14 @@ hr
 
 }
 
+@media (max-width: 992px) {
+    .cart-hidden
+    {
+        display: none !important;
+    }
+
+}
+
 @media (max-width: 576px) {
     .logo
     {
@@ -314,4 +322,141 @@ div.col
     padding: 0;
 }
 
+/* Hide the navigation bar by default */
+.bottom-nav {
+    display: none;
+}
 
+/* Media query to show navigation bar on screens 768px and below */
+@media screen and (max-width: 768px) {
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: $secondary;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.10);
+        display: flex;
+        justify-content: space-around;
+        z-index: 1000;
+    }
+
+    .nav-item 
+    {
+        flex: 1;
+        text-align: center;
+        // padding: 2px 1px;
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        fill: black;
+        // font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .nav-item:hover 
+    {
+        color: $primary;
+    }
+
+    // .nav-item .bi
+    // {
+    //     font-size: 20px;
+    //     display: block;
+    //     margin-bottom: 5px;
+    // }
+
+    .nav-label 
+    {
+        display: block;
+        font-size: 12px;
+    }
+}
+
+/* Default: Hide the navigation bar */
+.bottom-nav 
+{
+    display: none;
+}
+
+/* Media query for screens 768px and below */
+@media screen and (max-width: 768px) 
+{
+.bottom-nav 
+{
+    display: flex;
+}
+}
+
+// empty-wishlist
+
+.empty-wishlist {
+    text-align: center;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.empty-wishlist i {
+    font-size: 64px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.empty-wishlist h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-wishlist p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.empty-wishlist a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: $secondary;
+    background-color: $primary;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.empty-wishlist a:hover {
+    background-color: $primary;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .empty-wishlist {
+        padding: 20px;
+    }
+
+    .empty-wishlist i {
+        font-size: 48px;
+    }
+
+    .empty-wishlist h2 {
+        font-size: 20px;
+    }
+
+    .empty-wishlist p {
+        font-size: 14px;
+    }
+
+    .empty-wishlist a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .spec-margin
+    {
+        margin-top: 25px;
+    }
+}

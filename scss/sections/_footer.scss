@@ -167,7 +167,7 @@ body
         display: block; /* Always show content on large screens */
         max-height: none; /* Remove the max-height restriction */
         padding: 0; /* Adjust padding if necessary */
-        overflow: visible; /* Ensure content is fully visible */
+        overflow: hidden; /* Ensure content is fully visible */
     }
 }
 

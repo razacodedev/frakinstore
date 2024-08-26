@@ -1,0 +1,30 @@
+.zoom-box {
+    position: relative;
+}
+
+.zoom-box img {
+    vertical-align: bottom;
+}
+
+.zoom-box .zoom-selector {
+    position: absolute;
+    background-image: url("images/selector.png"); /* Ensure the path is correct */
+    background-repeat: no-repeat; /* Change to 'no-repeat' for a better appearance */
+    display: none; /* Show this when zooming */
+    cursor:zoom-in;
+    z-index: 1050; /* Ensure the selector appears above other elements */
+}
+
+.zoom-box .viewer-box {
+    position: absolute;
+    border: 1px solid rgb(239,237,240);
+    display: none; /* Show this when zooming */
+    overflow: hidden;
+    z-index: 1050; /* Ensure the viewer box appears above other content */
+}
+
+.zoom-box .viewer-box > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

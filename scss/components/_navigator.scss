@@ -43,6 +43,14 @@ body
     outline: 0;
 }
 
+@media (max-width: 576px)
+{
+    .offcanvas
+    {
+        max-width: 90%;
+    }
+}
+
 .navigator
 {
     display: inline;
