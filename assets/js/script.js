@@ -95,9 +95,15 @@ $(function(){
 
 // add to cart
 document.addEventListener('DOMContentLoaded', () => {
-    const productPrice = parseFloat(document.getElementById('product-price').textContent.replace('Rs. ', '').replace(/,/g, ''));
+    const productPriceElement = document.getElementById('product-price');
     const addToCartButton = document.getElementById('add-to-cart');
     const quantityInput = document.getElementById('quantity');
+
+    // Check if the productPriceElement exists and extract price
+    let productPrice = 0;
+    if (productPriceElement) {
+        productPrice = parseFloat(productPriceElement.textContent.replace('Rs. ', '').replace(/,/g, ''));
+    }
 
     // Function to format numbers with commas
     function formatNumber(num) {
@@ -106,27 +112,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update total price
     function updateTotalPrice(totalPrice) {
-        document.querySelector('.total-price').textContent = formatNumber(totalPrice);
+        document.querySelectorAll('.total-price').forEach(element => {
+            element.textContent = formatNumber(totalPrice);
+        });
     }
 
     function updateCart() {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const cartItemsContainer = document.getElementById('cart-items');
-        cartItemsContainer.innerHTML = '';
         let totalPrice = 0;
 
-        cart.forEach((item, index) => {
-            let itemTotal = item.price * item.quantity;
-            const cartItem = `
-                <tr data-index="${index}">
-                    <td>${item.name}</td>
-                    <td>${item.quantity}</td>
-                    <td>Rs. ${formatNumber(item.price)}</td>
-                    <td>Rs. ${formatNumber(itemTotal)}</td>
-                    <td><i class="bi bi-trash-fill text-danger remove-item" data-index="${index}" style="cursor: pointer;"></i></td> <!-- Trash icon -->
-                </tr>`;
-            cartItemsContainer.insertAdjacentHTML('beforeend', cartItem);
-            totalPrice += itemTotal;
+        // Select all cart items containers
+        const cartItemsContainers = document.querySelectorAll('.cart-items');
+
+        cartItemsContainers.forEach(cartItemsContainer => {
+            cartItemsContainer.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                let itemTotal = item.price * item.quantity;
+                const cartItem = `
+                    <tr data-index="${index}">
+                        <td>${item.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>Rs. ${formatNumber(item.price)}</td>
+                        <td>Rs. ${formatNumber(itemTotal)}</td>
+                        <td><i class="bi bi-trash-fill text-danger remove-item" data-index="${index}" style="cursor: pointer;"></i></td> <!-- Trash icon -->
+                    </tr>`;
+                cartItemsContainer.insertAdjacentHTML('beforeend', cartItem);
+                totalPrice += itemTotal;
+            });
         });
 
         updateTotalPrice(totalPrice); // Update the total price using the class
@@ -172,17 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCart(); // Refresh the cart display
     }
 
-    addToCartButton.addEventListener('click', addToCart);
-    updateCart();
+    // Add event listeners only if the relevant elements exist
+    if (addToCartButton && quantityInput) {
+        addToCartButton.addEventListener('click', addToCart);
+        document.getElementById('button-increment')?.addEventListener('click', () => {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        });
+        document.getElementById('button-decrement')?.addEventListener('click', () => {
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        });
+    }
 
-    document.getElementById('button-increment').addEventListener('click', () => {
-        quantityInput.value = parseInt(quantityInput.value) + 1;
-    });
-
-    document.getElementById('button-decrement').addEventListener('click', () => {
-        if (parseInt(quantityInput.value) > 1) {
-            quantityInput.value = parseInt(quantityInput.value) - 1;
-        }
-    });
+    // Update the cart if cart items container exists
+    if (document.querySelector('.cart-items')) {
+        console.log('Updating cart...');
+        updateCart();
+    } else {
+        console.log('Cart items not found on this page.');
+    }
 });
-
